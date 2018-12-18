@@ -1,0 +1,181 @@
+= Project Container for React
+:description: Project Container for React
+:doctype: book
+:sectnums:
+:sectanchors:
+:toc: left
+
+Project container for React projects.
+
+== Introduction
+
+This project is meant to be as a container for a React project.
+The idea is to try and separate the code which is specific to a particular React project from the code that many projects have in common.
+The code that is deemed to be common among most React projects is collected, as much as possible, in this container project.
+
+== Initialize the Project
+
+In order to install the dependencies needed by this project and the types needed to perform static type checking with flow, run the following command from within the project directory:
+
+`npm run initialize-project`
+
+== Available Scripts
+
+In the project directory, you can run:
+
+=== npm start
+
+Alias for xref:npm-run-serve:dev[npm run serve:dev].
+
+=== npm run build:dev
+
+Runs all tests, linting and static type checking, then creates a development build of the project.
+The resulting build can be found in the directory "build_dev".
+
+=== npm run build:prod-local
+
+Runs all tests, linting and static type checking, then creates a production build of the project.
+The resulting build is meant to be served locally, and can be found in the directory "build_prod".
+
+=== npm run build:prod-deploy
+
+Runs all tests, linting and static type checking, then creates a production build of the project.
+The resulting build is meant to be deployed, and can be found in the directory "build_deploy".
+
+=== npm run flow
+
+Performs statyc type checking on all files annotated with ´// @flow´.
+
+=== npm run flow-coverage
+
+Collects and shows information about static typing coverage for all
+the files where flow typing is used.
+
+=== npm run flow-typed-install
+
+Installs/updates available flow types for all npm dependencies. Creates stub flow types of
+type "any" when flow types are not available. +
+
+IMPORTANT: Updating the flow type definitions often causes errors. The flow-typed directory
+is therefore checked in in git, and type definitions should NOT be updated often.
+If you update the flow type definitions, be prepared to fix the errors that will possibly
+pop up as a consequence.
+
+=== npm run initialize-project
+
+Installs all npm dependencies by running `npm install`.
+
+=== npm run eslint:fix
+
+Runs eslint on all files within the project, as specified in .eslintrc.json and .eslintignore.
+
+Fixes the problems found.
+
+=== npm run eslint:log
+
+Runs eslint on all files within the project, as specified in .eslintrc.json and .eslintignore.
+
+Logs the results.
+
+=== npm run manual-precommit
+
+Runs xref:npm-run-manual-precommit-staged[npm run manual-precommit-staged] if there are any staged files, otherwise it runs xref:npm-run-manual-precommit-all[npm run manual-precommit-all].
+
+anchor:npm-run-manual-precommit-all[]
+
+=== npm run manual-precommit-all
+
+Stages all edited files and runs tests, formatting, linting and static type checking on them.
+
+anchor:npm-run-manual-precommit-staged[]
+
+=== npm run manual-precommit-staged
+
+Runs tests, formatting, linting and static type checking on all staged files.
+
+=== npm run pa11y
+
+Runs pa11y with the configuartion contained in `./pa11y-config.json`.
+
+=== npm run precommit
+
+Runs all tests, formatting, linting and static type checking.
+
+It is run automatically by husky on `git commit`.
+
+=== npm run re-organize-build_deploy
+
+Re-organizes files inside the directory `build_deploy`for an easier deployment.
+
+=== npm run sass-lint:log
+
+Runs sass-lint on all files within the project, as specified in .sasslintrc.
+
+Logs the results.
+
+anchor:npm-run-serve:dev[]
+
+=== npm run serve:dev
+
+Runs all tests, linting and static type checking, then builds and runs the project in development mode.
+
+Open https://localhost:3001[https://localhost:3001] to view it in the browser.
+
+The page will reload if you make edits.
+
+You will also see any lint errors in the console.
+
+=== npm run serve:prod-local
+
+Runs all tests, linting and static type checking, then builds and runs the project in production mode.
+
+Open https://localhost:3001[https://localhost:3001] to view it in the browser.
+
+anchor:npm-run-serve:test-coverage[]
+
+=== npm run serve:test-coverage
+
+Serves a visual representation of the test coverage for the project.
+
+Open https://localhost:3000[https://localhost:3000] to view it in the browser.
+
+=== npm run snyk
+
+Runs snyk to check for vulnerabilities in the npm dependencies.
+
+anchor:npm-run-start[]
+
+=== npm run start
+
+
+Alias for xref:npm-run-serve:dev[npm run serve:dev].
+
+=== npm run test
+
+Finds all files with extension ´.test.js´ and ´.test.jsx´ within the project and runs the tests they contain.
+
+=== npm run test-coverage
+
+Collects and shows test-coverage info from all .js and .jsx files within the
+`src` directory. +
+The information is also saved in the `test-coverage` directory, and
+can be visualize din the browser by running xref:npm-run-serve:test-coverage[npm run serve:test-coverage].
+
+=== npm run update-all
+
+Updates all the npm packages used in the project.
+
+=== npm run webpack-bundle-analyzer
+
+Analyzes a webpack bundle, based on a `stats.json` file given as input.
+Shows the result in the default web browser.
+
+=== npm run win-start
+
+Alias for xref:npm-run-win-start[npm run win-start].
+
+anchor:npm-run-win-start[]
+
+=== npm run win-start
+
+Windows adaptation of xref:npm-run-start[npm run start].

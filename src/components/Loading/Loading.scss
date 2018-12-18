@@ -1,0 +1,24 @@
+$loading-width: 200px;
+
+.loading-container {
+  margin-left: auto;
+  margin-right: auto;
+
+  .gif-image {
+    margin-left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    width: $loading-width;
+    z-index: 1000;
+  }
+
+  &.cover-all {
+    height: 80vh;
+    width: 100%;
+    z-index: 1000;
+
+    .gif-image {
+      top: calc(40vh - .5 * #{$loading-width});
+    }
+  }
+}

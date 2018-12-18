@@ -1,0 +1,9 @@
+flow-typed/**
+node_modules/**
+build_dev/**
+build_prod/**
+build_deploy/**
+test-coverage/**
+container-assets/scripts/**
+project-assets/scripts/**
+src/project/project-assets/scripts/**

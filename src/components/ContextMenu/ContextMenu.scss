@@ -1,0 +1,25 @@
+$color-surface: #fff;
+$context-menu-border-radius: 5px;
+$context-menu-card-box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, .14), 2px 2px 6px 1px rgba(0, 0, 0, .28);
+
+.context-menu-container {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 90;
+}
+
+.context-menu {
+  background: $color-surface;
+  border-radius: $context-menu-border-radius;
+  box-shadow: $context-menu-card-box-shadow;
+  height: fit-content;
+  position: relative;
+  width: fit-content;
+
+  .k-button {
+    justify-content: start;
+  }
+}

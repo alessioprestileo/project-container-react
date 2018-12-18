@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getCurrentTranslations matches the snapshot for different inputs 1`] = `
+Object {
+  "ApiCallFailure.button": "OK",
+  "ApiCallFailure.message": "Could not connect to the server",
+}
+`;
+
+exports[`getCurrentTranslations matches the snapshot for different inputs 2`] = `
+Object {
+  "ApiCallFailure.button": "OK",
+  "ApiCallFailure.message": "Could not connect to the server",
+}
+`;
+
+exports[`getCurrentTranslations matches the snapshot for different inputs 3`] = `null`;
+
+exports[`objectToUrlencoded matches the snapshot for different inputs 1`] = `"userName=username%40me.com&password=password"`;
+
+exports[`objectToUrlencoded matches the snapshot for different inputs 2`] = `""`;
+
+exports[`objectToUrlencoded matches the snapshot for different inputs 3`] = `""`;
+
+exports[`redirectNotAuthorizedToLogin matches the snapshot for different inputs 1`] = `null`;
+
+exports[`redirectNotAuthorizedToLogin matches the snapshot for different inputs 2`] = `"redirected"`;
+
+exports[`redirectNotAuthorizedToLogin matches the snapshot for different inputs 3`] = `null`;

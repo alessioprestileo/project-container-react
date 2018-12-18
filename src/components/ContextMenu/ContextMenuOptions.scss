@@ -1,0 +1,32 @@
+$context-menu-option-border-top-left-radius: 5px;
+$context-menu-option-icon-margin-right: 10px;
+
+.context-menu-options {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  text-align: center;
+}
+
+.context-menu-option {
+
+  &:first-child,
+  &:first-child .k-button { // sass-lint:disable-line force-element-nesting
+    border-top-left-radius: $context-menu-option-border-top-left-radius;
+    border-top-right-radius: $context-menu-option-border-top-left-radius;
+  }
+
+  &:last-child,
+  &:last-child .k-button { // sass-lint:disable-line force-element-nesting
+    border-bottom-left-radius: $context-menu-option-border-top-left-radius;
+    border-bottom-right-radius: $context-menu-option-border-top-left-radius;
+  }
+
+  .k-button {
+    width: 100%;
+  }
+
+  .option-icon {
+    margin-right: $context-menu-option-icon-margin-right;
+  }
+}

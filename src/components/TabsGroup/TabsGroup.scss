@@ -1,0 +1,39 @@
+$tab-element-padding: 10px 15px;
+
+.tab-label {
+  font-weight: bold;
+}
+
+.tab {
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  .tab-element {
+    cursor: pointer;
+    outline: none;
+    padding: $tab-element-padding;
+    text-decoration: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.active {
+
+    .tab-element {
+      cursor: default;
+    }
+
+    .tab-label {
+      color: initial;
+    }
+  }
+}
+
+.tab-content > .tab-pane {
+  display: block;
+}
